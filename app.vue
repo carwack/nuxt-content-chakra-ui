@@ -4,6 +4,7 @@ import { CButton, CReset } from '@chakra-ui/vue-next'
 
 <template>
 	<div>
+		<CReset />
 		<NuxtPage />
 	</div>
 </template>
