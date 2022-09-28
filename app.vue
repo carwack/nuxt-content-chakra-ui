@@ -1,10 +1,7 @@
-<script setup>
-import { CButton, CReset } from '@chakra-ui/vue-next'
-</script>
+<script setup></script>
 
 <template>
 	<div>
-		<CReset />
 		<NuxtPage />
 	</div>
 </template>
