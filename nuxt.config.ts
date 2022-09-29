@@ -11,4 +11,11 @@ export default defineNuxtConfig({
       })
     }
   ],
+  content: {
+    markdown: {
+      tags: {
+        blockquote: 'MdxBlockquote'
+      }
+    }
+  }
 })
