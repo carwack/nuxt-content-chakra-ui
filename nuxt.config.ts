@@ -1,5 +1,9 @@
+import { MdxComponents } from './components/content/MdcComponents'
+import {} from '@chakra-ui/vue-next'
+
 export default defineNuxtConfig({
   modules: [
+    './modules/chakra-module.js',
     '@nuxt/content',
     function (options, nuxt) {
       nuxt.hook('nitro:config', config => {
@@ -10,12 +14,5 @@ export default defineNuxtConfig({
         }
       })
     }
-  ],
-  content: {
-    markdown: {
-      tags: {
-        blockquote: 'MdxBlockquote'
-      }
-    }
-  }
+  ]
 })

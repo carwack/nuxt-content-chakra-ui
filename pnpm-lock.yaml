@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/core': ^7.0.0
   '@chakra-ui/vue-next': 1.0.0-alpha.15
+  '@chakra-ui/vue-system': 0.1.0-alpha.10
   '@emotion/css': ^11.9.0
   '@emotion/server': ^11.4.0
   '@nuxt/content': ^2.1.1
@@ -13,6 +14,7 @@ specifiers:
 dependencies:
   '@babel/core': 7.19.1
   '@chakra-ui/vue-next': 1.0.0-alpha.15_mpznm62pwptv77nif4uip6extu
+  '@chakra-ui/vue-system': 0.1.0-alpha.10_mpznm62pwptv77nif4uip6extu
   '@emotion/css': 11.10.0_@babel+core@7.19.1
   '@emotion/server': 11.10.0_@emotion+css@11.10.0
   vue: 3.2.39
@@ -403,6 +405,15 @@ packages:
       vue: 3.2.39
     dev: false
 
+  /@chakra-ui/c-color-mode/0.1.0-alpha.9_vue@3.2.39:
+    resolution: {integrity: sha512-w1K++9RERKq2BqVOzxqkGuhBLWFLT4ZL2AdfOCkJFjvZtW1Ss3mm5rtv94NtttIiUW25I7Zt0JAPHWHAWcI4WQ==}
+    peerDependencies:
+      vue: ^3.1.4
+    dependencies:
+      '@chakra-ui/utils': 1.10.4
+      vue: 3.2.39
+    dev: false
+
   /@chakra-ui/c-flex/1.0.0-alpha.12_mpznm62pwptv77nif4uip6extu:
     resolution: {integrity: sha512-XFRms7EdbCABafeXbZ70TvOnuUMOryCkiUm2KROBt1/cDfy1pQ3l7lcUoRqkZk/jlhCXQxdtDUTHa380pAElsQ==}
     peerDependencies:
@@ -697,6 +708,23 @@ packages:
       - react
     dev: false
 
+  /@chakra-ui/vue-system/0.1.0-alpha.10_mpznm62pwptv77nif4uip6extu:
+    resolution: {integrity: sha512-bEWs27LFwA3ST+zF2aKJLyLwLb7lqx5yX1x4/23yOVjDCnXwdskkLZOJvJZbB7uR1WvDjmGNW67/AwfYIbYYSA==}
+    peerDependencies:
+      vue: ^3.1.4
+    dependencies:
+      '@chakra-ui/c-color-mode': 0.1.0-alpha.9_vue@3.2.39
+      '@chakra-ui/styled-system': 1.19.0
+      '@chakra-ui/utils': 1.10.4
+      '@chakra-ui/vue-utils': 0.1.0-alpha.10_vue@3.2.39
+      '@emotion/css': 11.10.0_@babel+core@7.19.1
+      lodash.camelcase: 4.3.0
+      lodash.kebabcase: 4.1.1
+      vue: 3.2.39
+    transitivePeerDependencies:
+      - '@babel/core'
+    dev: false
+
   /@chakra-ui/vue-system/0.1.0-alpha.12_mpznm62pwptv77nif4uip6extu:
     resolution: {integrity: sha512-1zYUodOAhekTKjPC1rAKUpaKkv1k+xGYcEI9raYHBMx5kmD/QgxDfl5XhkOPoSa0pG3xwssLJndebWP2ZdZmBA==}
     peerDependencies:
@@ -739,6 +767,18 @@ packages:
       vue: 3.2.39
     transitivePeerDependencies:
       - '@babel/core'
+    dev: false
+
+  /@chakra-ui/vue-utils/0.1.0-alpha.10_vue@3.2.39:
+    resolution: {integrity: sha512-xehPEoMU/OBL5urzG8OIv/ti6zADitNraDGavQqQp1jASi1fw6kjj8kgT1jFYP957+/5evIDB5iPWSjsSSBgpw==}
+    peerDependencies:
+      vue: ^3.1.4
+    dependencies:
+      '@chakra-ui/utils': 1.10.4
+      css-box-model: 1.2.1
+      lodash.mergewith: 4.6.2
+      object-assign: 4.1.1
+      vue: 3.2.39
     dev: false
 
   /@chakra-ui/vue-utils/0.1.0-alpha.12_vue@3.2.39:
