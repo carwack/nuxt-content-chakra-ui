@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { CHeading, CLink } from '@chakra-ui/vue-next'
 
 defineProps<{ id: string }>()
