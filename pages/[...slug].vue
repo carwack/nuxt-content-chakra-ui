@@ -6,7 +6,7 @@ const { colorMode, toggleColorMode } = useColorMode()
 
 <template>
 	<main>
-		<CButton variant="ghost" @click="toggleColorMode">Hallo</CButton>
+		<CButton @click="toggleColorMode">Hallo</CButton>
 		<CText color="green">{{ colorMode }}</CText>
 		<ContentDoc />
 	</main>
