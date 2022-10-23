@@ -10,6 +10,7 @@ specifiers:
   add: ^2.0.6
   nuxt: 3.0.0-rc.11
   vue: ^3.2.36
+  vue-live: ^2.1.0
 
 dependencies:
   '@babel/core': 7.19.1
@@ -18,6 +19,7 @@ dependencies:
   '@emotion/css': 11.10.0_@babel+core@7.19.1
   '@emotion/server': 11.10.0_@emotion+css@11.10.0
   vue: 3.2.39
+  vue-live: 2.1.0_vue@3.2.39
 
 devDependencies:
   '@nuxt/content': 2.1.1
@@ -1583,11 +1585,38 @@ packages:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
     dev: true
 
+  /acorn-dynamic-import/4.0.0_acorn@6.4.2:
+    resolution: {integrity: sha512-d3OEjQV4ROpoflsnUA8HozoIR504TFxNivYEUi6uwz0IYhBkTDXGuWlNdMtybRt3nqVx/L6XqMt0FxkXuWKZhw==}
+    deprecated: This is probably built in to whatever tool you're using. If you still need it... idk
+    peerDependencies:
+      acorn: ^6.0.0
+    dependencies:
+      acorn: 6.4.2
+    dev: false
+
+  /acorn-jsx/5.3.2_acorn@6.4.2:
+    resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
+    peerDependencies:
+      acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      acorn: 6.4.2
+    dev: false
+
+  /acorn-walk/8.2.0:
+    resolution: {integrity: sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==}
+    engines: {node: '>=0.4.0'}
+    dev: false
+
+  /acorn/6.4.2:
+    resolution: {integrity: sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: false
+
   /acorn/8.8.0:
     resolution: {integrity: sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-    dev: true
 
   /add/2.0.6:
     resolution: {integrity: sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==}
@@ -1824,6 +1853,19 @@ packages:
       node-releases: 2.0.6
       update-browserslist-db: 1.0.9_browserslist@4.21.4
 
+  /buble/0.20.0:
+    resolution: {integrity: sha512-/1gnaMQE8xvd5qsNBl+iTuyjJ9XxeaVxAMF86dQ4EyxFJOZtsgOS8Ra+7WHgZTam5IFDtt4BguN0sH0tVTKrOw==}
+    hasBin: true
+    dependencies:
+      acorn: 6.4.2
+      acorn-dynamic-import: 4.0.0_acorn@6.4.2
+      acorn-jsx: 5.3.2_acorn@6.4.2
+      chalk: 2.4.2
+      magic-string: 0.25.9
+      minimist: 1.2.6
+      regexpu-core: 4.5.4
+    dev: false
+
   /buffer-crc32/0.2.13:
     resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==}
     dev: true
@@ -1870,6 +1912,11 @@ packages:
 
   /callsites/3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /camelcase/5.3.1:
+    resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
     dev: false
 
@@ -2092,6 +2139,11 @@ packages:
     resolution: {integrity: sha512-RyZrFi6PNpBFbIaQjXDlFIhFVqV42QeKSZX1yQIl6ihImq6vcHNGMtqQ/QzY3RMPuYSkvsRwtnt5M9NeYxKt0g==}
     dev: true
 
+  /core-js/3.25.5:
+    resolution: {integrity: sha512-nbm6eZSjm+ZuBQxCUPQKQCoUEfFOXjUZ8dTTyikyKaWrTYmAVbykQfwsKE5dBK88u3QCkCrzsx/PPlKfhsvgpw==}
+    requiresBuild: true
+    dev: false
+
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
 
@@ -2263,6 +2315,10 @@ packages:
     engines: {node: '>= 12'}
     dev: true
 
+  /debounce/1.2.1:
+    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
+    dev: false
+
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -2342,6 +2398,10 @@ packages:
   /detab/3.0.1:
     resolution: {integrity: sha512-T8gDOoz58xXMsXKLJkKxkyUTRkEpwOBL9w5nFFDJsD/XiFkajkBc2Yz99a/0kW7DGIYq/B1+oqqqru+fZetSvg==}
     dev: true
+
+  /detect-browser/5.3.0:
+    resolution: {integrity: sha512-53rsFbGdwMwlF7qvCt0ypLM5V5/Mbl0szB7GPN8y9NCcbknYOeVVXdrXEq+90IwAfrrzt6Hd+u2E2ntakICU8w==}
+    dev: false
 
   /detect-libc/2.0.1:
     resolution: {integrity: sha512-463v3ZeIrcWtdgIg6vI6XUncguvr2TnGl4SzDXinkt9mSLpBJKXT3mW6xT3VQdDN11+WVs29pgvivTc4Lp8v+w==}
@@ -3045,7 +3105,6 @@ packages:
 
   /hash-sum/2.0.0:
     resolution: {integrity: sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==}
-    dev: true
 
   /hast-to-hyperscript/10.0.1:
     resolution: {integrity: sha512-dhIVGoKCQVewFi+vz3Vt567E4ejMppS1haBRL6TEmeLeJVB1i/FJIIg/e6s1Bwn0g5qtYojHEKvyGA+OZuyifw==}
@@ -3465,6 +3524,11 @@ packages:
     dependencies:
       argparse: 2.0.1
     dev: true
+
+  /jsesc/0.5.0:
+    resolution: {integrity: sha512-uZz5UnB7u4T9LvwmFqXii7pZSouaRPorGs5who1Ip7VO0wxanFvBL7GkM6dTHlgX+jhBApRetaWpnDabOeTcnA==}
+    hasBin: true
+    dev: false
 
   /jsesc/2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
@@ -4971,6 +5035,11 @@ packages:
     engines: {node: ^14.13.1 || >=16.0.0}
     dev: true
 
+  /prismjs/1.29.0:
+    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+    engines: {node: '>=6'}
+    dev: false
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
@@ -5073,8 +5142,42 @@ packages:
       redis-errors: 1.2.0
     dev: true
 
+  /regenerate-unicode-properties/8.2.0:
+    resolution: {integrity: sha512-F9DjY1vKLo/tPePDycuH3dn9H1OTPIkVD9Kz4LODu+F2C75mgjAJ7x/gwy6ZcSNRAAkhNlJSOHRe8k3p+K9WhA==}
+    engines: {node: '>=4'}
+    dependencies:
+      regenerate: 1.4.2
+    dev: false
+
+  /regenerate/1.4.2:
+    resolution: {integrity: sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==}
+    dev: false
+
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
+    dev: false
+
+  /regexpu-core/4.5.4:
+    resolution: {integrity: sha512-BtizvGtFQKGPUcTy56o3nk1bGRp4SZOTYrDtGNlqCQufptV5IkkLN6Emw+yunAJjzf+C9FQFtvq7IoA3+oMYHQ==}
+    engines: {node: '>=4'}
+    dependencies:
+      regenerate: 1.4.2
+      regenerate-unicode-properties: 8.2.0
+      regjsgen: 0.5.2
+      regjsparser: 0.6.9
+      unicode-match-property-ecmascript: 1.0.4
+      unicode-match-property-value-ecmascript: 1.2.0
+    dev: false
+
+  /regjsgen/0.5.2:
+    resolution: {integrity: sha512-OFFT3MfrH90xIW8OOSyUrk6QHD5E9JOTeGodiJeBS3J6IwlgzJMNE/1bZklWz5oTg+9dCMyEetclvCVXOPoN3A==}
+    dev: false
+
+  /regjsparser/0.6.9:
+    resolution: {integrity: sha512-ZqbNRz1SNjLAiYuwY0zoXW8Ne675IX5q+YHioAGbCw4X96Mjl2+dcX9B2ciaeyYjViDAfvIjFpQjJgLttTEERQ==}
+    hasBin: true
+    dependencies:
+      jsesc: 0.5.0
     dev: false
 
   /rehype-external-links/2.0.1:
@@ -5776,6 +5879,29 @@ packages:
       pathe: 0.3.8
     dev: true
 
+  /unicode-canonical-property-names-ecmascript/1.0.4:
+    resolution: {integrity: sha512-jDrNnXWHd4oHiTZnx/ZG7gtUTVp+gCcTTKr8L0HjlwphROEW3+Him+IpvC+xcJEFegapiMZyZe02CyuOnRmbnQ==}
+    engines: {node: '>=4'}
+    dev: false
+
+  /unicode-match-property-ecmascript/1.0.4:
+    resolution: {integrity: sha512-L4Qoh15vTfntsn4P1zqnHulG0LdXgjSO035fEpdtp6YxXhMT51Q6vgM5lYdG/5X3MjS+k/Y9Xw4SFCY9IkR0rg==}
+    engines: {node: '>=4'}
+    dependencies:
+      unicode-canonical-property-names-ecmascript: 1.0.4
+      unicode-property-aliases-ecmascript: 1.1.0
+    dev: false
+
+  /unicode-match-property-value-ecmascript/1.2.0:
+    resolution: {integrity: sha512-wjuQHGQVofmSJv1uVISKLE5zO2rNGzM/KCYZch/QQvez7C1hUhBIuZ701fYXExuufJFMPhv2SyL8CyoIfMLbIQ==}
+    engines: {node: '>=4'}
+    dev: false
+
+  /unicode-property-aliases-ecmascript/1.1.0:
+    resolution: {integrity: sha512-PqSoPh/pWetQ2phoj5RLiaqIk4kCNwoV3CI+LfGmWLKI3rE3kl1h59XpX2BjgDrmbxD9ARtQobPGU1SguCYuQg==}
+    engines: {node: '>=4'}
+    dev: false
+
   /unified/10.1.2:
     resolution: {integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==}
     dependencies:
@@ -6088,6 +6214,94 @@ packages:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: true
 
+  /vue-inbrowser-compiler-demi/4.54.1_3kiqpmk3xkgoxowr6hhpssvdyy:
+    resolution: {integrity: sha512-siDejDCHF/JZsuX3l5QKexWx0F5XW+5AqqEvYRn3tqu0sGmncQSPsbYrBb1IJo+0rvCHnRUl+ykgDsQlFgiQOA==}
+    requiresBuild: true
+    peerDependencies:
+      '@vue/compiler-sfc': '>=3'
+      vue: '>=2'
+      vue-template-compiler: '>=2'
+    peerDependenciesMeta:
+      '@vue/compiler-sfc':
+        optional: true
+      vue-template-compiler:
+        optional: true
+    dependencies:
+      '@vue/compiler-sfc': 3.2.39
+      vue: 3.2.39
+    dev: false
+
+  /vue-inbrowser-compiler-independent-utils/4.54.1_vue@3.2.39:
+    resolution: {integrity: sha512-hQN3mzLmWM33Ua2Oua5OgF8/BJjP6+T1Wzea5xHDRYCwVvJo2pxSJLhVqluaeBe3PB5vquMddceaKC4mhLe25A==}
+    peerDependencies:
+      vue: '>=2'
+    dependencies:
+      vue: 3.2.39
+    dev: false
+
+  /vue-inbrowser-compiler-utils/4.54.1_3kiqpmk3xkgoxowr6hhpssvdyy:
+    resolution: {integrity: sha512-OZwDFKw08NqE14f9Dev2i5mokJ23T/bnlLMMowDjrAO/U2+/B5IHbUBLQ9YKL4ESyJb/PmKWe0tnDcmLRP1+kw==}
+    peerDependencies:
+      vue: '>=2'
+    dependencies:
+      camelcase: 5.3.1
+      vue: 3.2.39
+      vue-inbrowser-compiler-demi: 4.54.1_3kiqpmk3xkgoxowr6hhpssvdyy
+      vue-inbrowser-compiler-independent-utils: 4.54.1_vue@3.2.39
+    transitivePeerDependencies:
+      - '@vue/compiler-sfc'
+      - vue-template-compiler
+    dev: false
+
+  /vue-inbrowser-compiler/4.54.1_3kiqpmk3xkgoxowr6hhpssvdyy:
+    resolution: {integrity: sha512-JhhtE/1SaetlTsn22O8S1wMrdK8cuRrAPzAKwgGgITTTTA7ZDAcXY79ld+z6k+MPkRhF73GBuMMHIHFtaLYlrQ==}
+    peerDependencies:
+      vue: '>=2'
+    dependencies:
+      acorn: 6.4.2
+      acorn-jsx: 5.3.2_acorn@6.4.2
+      buble: 0.20.0
+      camelcase: 5.3.1
+      detect-browser: 5.3.0
+      vue: 3.2.39
+      vue-inbrowser-compiler-utils: 4.54.1_3kiqpmk3xkgoxowr6hhpssvdyy
+      walkes: 0.2.1
+    transitivePeerDependencies:
+      - '@vue/compiler-sfc'
+      - vue-template-compiler
+    dev: false
+
+  /vue-live/2.1.0_vue@3.2.39:
+    resolution: {integrity: sha512-CD7fCLNx0DoJQWjyZXYA8/Xjujwii4xyjHfmsgvOd7OS2xAyGeUdLeK/7Ll7DPkUREAAmrSmMJQuJeYLXL0O0Q==}
+    peerDependencies:
+      vue: '>= 3.0.8'
+    dependencies:
+      '@babel/runtime': 7.19.0
+      '@vue/compiler-core': 3.2.39
+      '@vue/compiler-dom': 3.2.39
+      '@vue/compiler-sfc': 3.2.39
+      acorn: 8.8.0
+      acorn-walk: 8.2.0
+      core-js: 3.25.5
+      debounce: 1.2.1
+      hash-sum: 2.0.0
+      prismjs: 1.29.0
+      vue: 3.2.39
+      vue-inbrowser-compiler: 4.54.1_3kiqpmk3xkgoxowr6hhpssvdyy
+      vue-prism-editor: 2.0.0-alpha.2_vue@3.2.39
+    transitivePeerDependencies:
+      - vue-template-compiler
+    dev: false
+
+  /vue-prism-editor/2.0.0-alpha.2_vue@3.2.39:
+    resolution: {integrity: sha512-Gu42ba9nosrE+gJpnAEuEkDMqG9zSUysIR8SdXUw8MQKDjBnnNR9lHC18uOr/ICz7yrA/5c7jHJr9lpElODC7w==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.2.39
+    dev: false
+
   /vue-router/4.1.5_vue@3.2.39:
     resolution: {integrity: sha512-IsvoF5D2GQ/EGTs/Th4NQms9gd2NSqV+yylxIyp/OYp8xOwxmU8Kj/74E9DTSYAyH5LX7idVUngN3JSj1X4xcQ==}
     peerDependencies:
@@ -6105,6 +6319,10 @@ packages:
       '@vue/runtime-dom': 3.2.39
       '@vue/server-renderer': 3.2.39_vue@3.2.39
       '@vue/shared': 3.2.39
+
+  /walkes/0.2.1:
+    resolution: {integrity: sha512-mbCCLh/TineJ2hxHpV6E0OmXht0P8R695BKHbhjrh56GwTHlPVbOTftetdih9XLQZgkFkrJXhGz1j9cxq03tWQ==}
+    dev: false
 
   /wcwidth/1.0.1:
     resolution: {integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==}

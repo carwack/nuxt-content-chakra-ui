@@ -17,6 +17,7 @@
     "@chakra-ui/vue-system": "0.1.0-alpha.10",
     "@emotion/css": "^11.9.0",
     "@emotion/server": "^11.4.0",
-    "vue": "^3.2.36"
+    "vue": "^3.2.36",
+    "vue-live": "^2.1.0"
   }
 }

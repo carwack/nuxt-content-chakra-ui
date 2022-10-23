@@ -1,4 +1,4 @@
-export default defineNuxtConfig({
+export default {
   modules: [
     '@nuxt/content',
     function (options, nuxt) {
@@ -10,5 +10,10 @@ export default defineNuxtConfig({
         }
       })
     }
-  ]
-})
+  ],
+  build: {
+    extend(config, ctx) {
+      config.resolve.alias.vue$ = "vue/dist/vue.esm-browser.js";
+    }
+  }
+}

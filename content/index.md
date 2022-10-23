@@ -8,6 +8,10 @@ Try to navigate to [/about](/about). These 2 pages are rendered by the `pages/[.
 
 Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
 
+## Code Editor
+
+::code-editor{code="<CButton>test</CButton>"}
+::
 
 ## Mdc Component Examples
 
