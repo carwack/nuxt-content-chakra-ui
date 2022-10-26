@@ -15,5 +15,11 @@ export default {
     extend(config, ctx) {
       config.resolve.alias.vue$ = "vue/dist/vue.esm-browser.js";
     }
+  },
+  content: {
+    highlight: {
+      // Theme used in all color schemes.
+      theme: 'github-light'
+    }
   }
 }
