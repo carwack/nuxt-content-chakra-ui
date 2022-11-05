@@ -7,7 +7,7 @@ export const CodeContainer = defineComponent({
   setup(props: DeepPartial<BoxProps>, { attrs, slots }) {
     return () => {
       return (
-        <chakra.div p="3" pt="5" rounded="8px" my="8" bg="#011627" {...props}>
+        <chakra.div p="3" pt="5" rounded="8px" my="8" bg="#011627" color="#eee" {...props}>
           { slots }
         </chakra.div>
       )

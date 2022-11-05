@@ -9,8 +9,10 @@ specifiers:
   '@nuxt/content': ^2.1.1
   add: ^2.0.6
   nuxt: 3.0.0-rc.11
+  prismjs: ^1.29.0
   vue: ^3.2.36
   vue-live: ^2.1.0
+  vue-prism-editor: 2.0.0-alpha.2
 
 dependencies:
   '@babel/core': 7.19.1
@@ -18,8 +20,10 @@ dependencies:
   '@chakra-ui/vue-system': 0.1.0-alpha.10_mpznm62pwptv77nif4uip6extu
   '@emotion/css': 11.10.0_@babel+core@7.19.1
   '@emotion/server': 11.10.0_@emotion+css@11.10.0
+  prismjs: 1.29.0
   vue: 3.2.39
   vue-live: 2.1.0_vue@3.2.39
+  vue-prism-editor: 2.0.0-alpha.2_vue@3.2.39
 
 devDependencies:
   '@nuxt/content': 2.1.1
